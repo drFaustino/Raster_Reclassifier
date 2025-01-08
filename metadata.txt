@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Raster Reclassifier
+qgisMinimumVersion=3.0
+description=Reclassification of the raster layer using a table of range values ​​extracted directly from the raster band, or defined directly by the user. The histogram of the raster is shown, reflecting the distribution of values ​​within the minimum and maximum range of the selected reference band.
+version=0.1
+author=dr. Geol. Faustino Cetraro
+email=geol-faustino@libero.it
+
+about=The plugin allows you to divide raster values into intervals using methods such as Equal Interval (intervals of equal width), Quantile (intervals based on quantiles), or User (manual interval definition). It is possible to customize the colors for the histogram and classes, making it easier to visually interpret the generated categories. The intervals can be modified, and table data can be saved in standard formats such as CSV or TXT. Additionally, the reclassified raster can be saved and automatically loaded into the QGIS project for further analysis. The plugin includes tools to display essential statistics, such as the count of valid cells, the mean, minimum, maximum, and standard deviation of the raster. It also allows importing interval values directly from external files. Thanks to its user-friendly interface, the plugin is suitable even for users with limited experience, enabling more in-depth analyses, such as creating thematic maps, identifying key areas, and categorizing data for specific purposes. By automating complex processes, it reduces the risk of errors and saves time. Its versatility makes it applicable in various fields, including environmental analysis, land management, and urban planning. Support for standard formats and direct integration with QGIS ensures compatibility with other tools and software, making this plugin a powerful and flexible solution for improving raster data analysis and presentation. *** ITA: Il plugin consente di suddividere i valori del raster in intervalli utilizzando metodi come Equal Interval (intervalli di uguale ampiezza), Quantile (intervalli basati sui quantili) o User (definizione manuale degli intervalli). È possibile personalizzare i colori per l'istogramma e per le classi, agevolando l'interpretazione visiva delle categorie generate. Gli intervalli possono essere modificati e i dati della tabella salvati in formati standard come CSV o TXT. Inoltre, il raster riclassificato può essere salvato e caricato automaticamente nel progetto QGIS per ulteriori analisi. Il plugin include strumenti per visualizzare statistiche essenziali, come il conteggio delle celle valide, la media, il valore minimo, massimo e la deviazione standard del raster, e consente di importare i valori degli intervalli direttamente da file esterni. Grazie alla sua semplicità d'uso, è adatto anche a utenti con poca esperienza, permettendo di eseguire analisi più approfondite, come la creazione di mappe tematiche, l'identificazione di aree chiave e la categorizzazione dei dati per scopi specifici. Automatizzando processi complessi, riduce il rischio di errori e fa risparmiare tempo. La sua versatilità lo rende applicabile in diversi ambiti, tra cui l'analisi ambientale, la gestione del territorio e la pianificazione urbana. Il supporto per formati standard e l’integrazione diretta con QGIS garantiscono la compatibilità con altri strumenti e software, rendendo questo plugin una soluzione potente e flessibile per migliorare l'analisi e la presentazione dei dati raster.
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=analysis, attribute table, calculator, dem, processing, raster, table
+
+homepage=http://homepage
+category=Raster
+icon=icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
