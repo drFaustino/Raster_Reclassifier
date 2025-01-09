@@ -318,7 +318,7 @@
     </message>
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="260"/>
-        <source>Output</source>
+        <source>Path</source>
         <translation>Path</translation>
     </message>
     <message>

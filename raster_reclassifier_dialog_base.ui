@@ -257,7 +257,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Output</string>
+     <string>Path</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_load_prg">
@@ -284,7 +284,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
