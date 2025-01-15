@@ -235,8 +235,11 @@ class RasterReclassifier:
                 self.dlg.pushButton_save_table.clicked.connect(self.on_pushButton_save_table)
                 self.dlg.pushButton_graph.clicked.connect(self.on_pushButton_graph)
                 self.dlg.pushButton_close.clicked.connect(self.on_pushButton_close)
+                
+                # Connessione del nuovo pulsante
+                self.dlg.pushButton_new.clicked.connect(self.pushButton_new_value)
 
-                self._events_connected = True
+                self._events_connected = True  
 
             # Set the width of the columns
             self.dlg.tableWidget_value.setColumnWidth(0, 90)
@@ -966,7 +969,7 @@ class RasterReclassifier:
 
             self.dlg.progressBar.setValue(100)
 
-            QMessageBox.information(self.dlg, self.tr("SSave completed"), self.tr(f"Reclassified raster saved as GeoTIFF: {os.path.basename(output_path)}"))
+            QMessageBox.information(self.dlg, self.tr("Save completed"), self.tr(f"Reclassified raster saved as GeoTIFF: {os.path.basename(output_path)}"))
 
             # Load the raster into the project if required
             if self.dlg.checkBox_load_prg.isChecked():
@@ -990,3 +993,27 @@ class RasterReclassifier:
         """
         return np.where((raster_data >= start_value) & (raster_data <= end_value), new_value, raster_data)
 
+    def pushButton_new_value(self):
+        """
+        Fills the third column of the tableWidget with increasing integer values, starting at 1.
+        Ensures the table has at least one row and three columns before proceeding.
+
+        The function assumes that `self.dlg.tableWidget_value` is a valid QTableWidget instance.
+        """
+        # Verify that the table exists in the dialog
+        if not hasattr(self.dlg, 'tableWidget_value'):
+            QMessageBox.critical(self.dlg, self.tr("Error"), self.tr("The tableWidget_value is not defined in the dialog."))
+            return
+
+        # Verify that the table has rows
+        row_count = self.dlg.tableWidget_value.rowCount()
+        if row_count == 0:
+            QMessageBox.warning(self.dlg, self.tr("Warning"), self.tr("The table is empty. Add some rows before proceeding."))
+            return     
+
+        # Fills the third column with increasing integer values starting from 1
+        for row in range(row_count):
+            self.dlg.tableWidget_value.setItem(row, 2, QTableWidgetItem(str(row + 1)))
+
+        # Mostra un messaggio di conferma
+        QMessageBox.information(self.dlg, self.tr("Operation completed"), self.tr("The new values have been added successfully."))

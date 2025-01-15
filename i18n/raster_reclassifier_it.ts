@@ -1,247 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT" sourcelanguage="en_US">
+<TS version="2.1" language="it_IT" sourcelanguage="en">
 <context>
     <name>RasterReclassifier</name>
     <message>
-        <location filename="../raster_reclassifier.py" line="198"/>
+        <location filename="../raster_reclassifier.py" line="197"/>
         <source>&amp;Raster Reclassifier</source>
-        <translation>&amp;Riclassifica Raster</translation>
+        <translation>&amp;Raster Reclassifier</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="190"/>
+        <location filename="../raster_reclassifier.py" line="189"/>
         <source>Raster Reclassifier</source>
-        <translation>Riclassifica Raster</translation>
+        <translation>Raster Reclassifier</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="983"/>
+        <location filename="../raster_reclassifier.py" line="1005"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="260"/>
+        <location filename="../raster_reclassifier.py" line="262"/>
         <source>An error occurred: {str(e)}</source>
         <translation>Si è verificato un errore: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="296"/>
+        <location filename="../raster_reclassifier.py" line="298"/>
         <source>Select Output File</source>
-        <translation>Seleziona file di uscita</translation>
+        <translation>Seleziona file di output</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="740"/>
+        <location filename="../raster_reclassifier.py" line="742"/>
         <source>Confirm</source>
         <translation>Conferma</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="368"/>
+        <location filename="../raster_reclassifier.py" line="370"/>
         <source>Do you want to overwrite the values in the table?</source>
-        <translation>Vuoi sovrascrivere i valori in tabella?</translation>
+        <translation>Vuoi sovrascrivere i valori nella tabella?</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="868"/>
+        <location filename="../raster_reclassifier.py" line="870"/>
         <source>Invalid or not selected raster layer.</source>
         <translation>Layer raster non valido o non selezionato.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="877"/>
+        <location filename="../raster_reclassifier.py" line="879"/>
         <source>No band selected.</source>
         <translation>Nessuna banda selezionata.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="888"/>
+        <location filename="../raster_reclassifier.py" line="890"/>
         <source>Unable to open raster file with GDAL.</source>
         <translation>Impossibile aprire il file raster con GDAL.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="431"/>
+        <location filename="../raster_reclassifier.py" line="433"/>
         <source>No data available in the selected band.</source>
         <translation>Nessun dato disponibile nella banda selezionata.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="481"/>
+        <location filename="../raster_reclassifier.py" line="483"/>
         <source>Classification method not supported.</source>
         <translation>Metodo di classificazione non supportato.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="485"/>
+        <location filename="../raster_reclassifier.py" line="487"/>
         <source>Error while calculating intervals: {str(e)}</source>
         <translation>Errore durante il calcolo degli intervalli: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="575"/>
+        <location filename="../raster_reclassifier.py" line="577"/>
         <source>Histogram</source>
         <translation>Istogramma</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="576"/>
+        <location filename="../raster_reclassifier.py" line="578"/>
         <source>Raster Values</source>
         <translation>Valori raster</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="577"/>
+        <location filename="../raster_reclassifier.py" line="579"/>
         <source>Count</source>
         <translation>Conteggio</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="562"/>
+        <location filename="../raster_reclassifier.py" line="564"/>
         <source>Error generating histogram: {str(e)}</source>
         <translation>Errore durante la generazione dell&apos;istogramma: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="604"/>
+        <location filename="../raster_reclassifier.py" line="606"/>
         <source>Error creating empty histogram: {str(e)}</source>
         <translation>Errore durante la creazione di un istogramma vuoto: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="740"/>
+        <location filename="../raster_reclassifier.py" line="742"/>
         <source>Are you sure you want to delete your data?</source>
         <translation>Sei sicuro di voler eliminare i dati?</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="642"/>
+        <location filename="../raster_reclassifier.py" line="644"/>
         <source>Error during reset: {str(e)}</source>
         <translation>Errore durante il reset: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="649"/>
+        <location filename="../raster_reclassifier.py" line="651"/>
         <source>Empty Table</source>
         <translation>Tabella vuota</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="649"/>
+        <location filename="../raster_reclassifier.py" line="651"/>
         <source>The table is empty. There is no data to save.</source>
         <translation>La tabella è vuota. Non ci sono dati da salvare.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="668"/>
+        <location filename="../raster_reclassifier.py" line="670"/>
         <source>Save table</source>
         <translation>Salva la tabella</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="668"/>
+        <location filename="../raster_reclassifier.py" line="670"/>
         <source>CSV Files (*.csv);;Text Files (*.txt)</source>
-        <translation>File CSV (*.csv);;File di testo (*.txt)</translation>
+        <translation>File CSV (*.csv);;File TXT (*.txt)</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="681"/>
+        <location filename="../raster_reclassifier.py" line="683"/>
         <source>Start</source>
         <translation>Inizio</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="681"/>
+        <location filename="../raster_reclassifier.py" line="683"/>
         <source>End</source>
         <translation>Fine</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="681"/>
+        <location filename="../raster_reclassifier.py" line="683"/>
         <source>New</source>
         <translation>Nuovo</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="970"/>
+        <location filename="../raster_reclassifier.py" line="972"/>
         <source>Save completed</source>
         <translation>Salvataggio completato</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="695"/>
+        <location filename="../raster_reclassifier.py" line="697"/>
         <source>Table saved successfully!</source>
         <translation>Tabella salvata con successo!</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="698"/>
+        <location filename="../raster_reclassifier.py" line="700"/>
         <source>Error saving file: {str(e)}</source>
         <translation>Errore durante il salvataggio del file: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="705"/>
+        <location filename="../raster_reclassifier.py" line="707"/>
         <source>No histogram to save.</source>
         <translation>Nessun istogramma da salvare.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="710"/>
+        <location filename="../raster_reclassifier.py" line="712"/>
         <source>Save histogram</source>
         <translation>Salva istogramma</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="710"/>
+        <location filename="../raster_reclassifier.py" line="712"/>
         <source>Image Files(*.png *.jpg *.jpeg *.bmp *.tiff);;PNG Files (*.png)</source>
-        <translation>File immagine (*.png *.jpg *.jpeg *.bmp *.tiff);;File PNG (*.png)</translation>
+        <translation>File immagine(*.png *.jpg *.jpeg *.bmp *.tiff);;PNG Files (*.png)</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="719"/>
+        <location filename="../raster_reclassifier.py" line="721"/>
         <source>Histogram saved successfully!</source>
         <translation>Istogramma salvato con successo!</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="722"/>
+        <location filename="../raster_reclassifier.py" line="724"/>
         <source>Error saving image: {str(e)}</source>
         <translation>Errore durante il salvataggio dell&apos;immagine: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="790"/>
+        <location filename="../raster_reclassifier.py" line="792"/>
         <source>Error during cleanup: {str(e)}</source>
         <translation>Errore durante la cancellazione: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="797"/>
+        <location filename="../raster_reclassifier.py" line="799"/>
         <source>Select User from the menu and run ranking.</source>
-        <translation>Selezionare Utente dal menu ed eseguire Estrai per la classificazione.</translation>
+        <translation>Seleziona Utente dal menu ed esegu classificazione.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="815"/>
+        <location filename="../raster_reclassifier.py" line="817"/>
         <source>Import values</source>
         <translation>Importa valori</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="815"/>
+        <location filename="../raster_reclassifier.py" line="817"/>
         <source>Text file (*.txt);;File CSV (*.csv);;All files (*)</source>
-        <translation>File di testo (*.txt);;File CSV (*.csv);;Tutti i file (*)</translation>
+        <translation>File TXT (*.txt);;File CSV (*.csv);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="856"/>
+        <location filename="../raster_reclassifier.py" line="858"/>
         <source>Unable to import data: {str(e)}</source>
         <translation>Impossibile importare i dati: {str(e)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="907"/>
+        <location filename="../raster_reclassifier.py" line="909"/>
         <source>Specify the save path for the GeoTIFF file.</source>
         <translation>Specificare il percorso di salvataggio per il file GeoTIFF.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="930"/>
+        <location filename="../raster_reclassifier.py" line="932"/>
         <source>Range Error</source>
         <translation>Errore di intervallo</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="930"/>
+        <location filename="../raster_reclassifier.py" line="932"/>
         <source>The start values ({start_value}) and end ({end_value}) must be between the minimum and maximum values.</source>
         <translation>I valori iniziale ({start_value}) e finale ({end_value}) devono essere compresi tra i valori minimo e massimo.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="939"/>
+        <location filename="../raster_reclassifier.py" line="941"/>
         <source>Non-numeric values in row cells {row + 1}.</source>
         <translation>Valori non numerici nelle celle di riga {riga + 1}.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="950"/>
+        <location filename="../raster_reclassifier.py" line="952"/>
         <source>Driver per GeoTIFF non disponibile.</source>
-        <translation>Driver per GeoTIFF non disponibile.</translation>
+        <translation>Driver per GeoTIFF non disponibile</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="970"/>
+        <location filename="../raster_reclassifier.py" line="972"/>
         <source>Reclassified raster saved as GeoTIFF: {os.path.basename(output_path)}</source>
         <translation>Raster riclassificato salvato come GeoTIFF: {os.path.basename(output_path)}</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="978"/>
+        <location filename="../raster_reclassifier.py" line="980"/>
         <source>Unable to load new raster into project.</source>
         <translation>Impossibile caricare il nuovo raster nel progetto.</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier.py" line="983"/>
+        <location filename="../raster_reclassifier.py" line="985"/>
         <source>Error while calculating reclassification: {str(e)}</source>
         <translation>Errore durante il calcolo della riclassificazione: {str(e)}</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier.py" line="1005"/>
+        <source>The tableWidget_value is not defined in the dialog.</source>
+        <translation>Il valore per la atbella non è definito nella finestra di dialogo.</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier.py" line="1011"/>
+        <source>Warning</source>
+        <translation>Attenzione</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier.py" line="1011"/>
+        <source>The table is empty. Add some rows before proceeding.</source>
+        <translation>La tabella è vuota. Aggiungi alcune righe prima di procedere.</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier.py" line="1019"/>
+        <source>Operation completed</source>
+        <translation>Operazione completata</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier.py" line="1019"/>
+        <source>The new values have been added successfully.</source>
+        <translation>I nuovi valori sono stati aggiunti correttamente.</translation>
     </message>
 </context>
 <context>
@@ -249,7 +274,7 @@
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="14"/>
         <source>Raster Reclassifier</source>
-        <translation>Riclassifica Raster</translation>
+        <translation>Raster Reclassifier</translation>
     </message>
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="29"/>
@@ -279,7 +304,7 @@
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="114"/>
         <source>Classify</source>
-        <translation>Classifica</translation>
+        <translation>Classificazione</translation>
     </message>
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="126"/>
@@ -312,104 +337,109 @@
         <translation>Estrai</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="232"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="219"/>
         <source>Output raster</source>
         <translation>Raster di uscita</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="260"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="247"/>
         <source>Path</source>
         <translation>Percorso</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="273"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="260"/>
         <source>Load in QGIS</source>
         <translation>Carica in QGIS</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="674"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="651"/>
         <source>Histogram</source>
         <translation>Istogramma</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="318"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="305"/>
         <source>Table</source>
-        <translation>Tabella</translation>
+        <translation>Tabella dei dati</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="331"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="318"/>
         <source>Start</source>
         <translation>Inizio</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="336"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="323"/>
         <source>End</source>
         <translation>Fine</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="341"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="328"/>
         <source>New</source>
         <translation>Nuovo</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="355"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="342"/>
         <source>Count</source>
         <translation>Conteggio</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="495"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="482"/>
         <source>0.00</source>
         <translation>0.00</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="390"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="377"/>
         <source>Minimum</source>
         <translation>Minimo</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="444"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="431"/>
         <source>Mean</source>
-        <translation>Media</translation>
+        <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="479"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="466"/>
         <source>Maximum</source>
         <translation>Massimo</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="514"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="501"/>
         <source>Standard deviation</source>
         <translation>Deviazione standard</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="530"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="517"/>
         <source>Statistics</source>
         <translation>Statistiche</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="546"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="533"/>
         <source>Import</source>
         <translation>Importa</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="560"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="547"/>
         <source>;</source>
         <translation>;</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="565"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="552"/>
         <source>,</source>
         <translation>,</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="570"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="557"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="575"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="562"/>
         <source>T</source>
         <translation>T</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="576"/>
+        <source>New values</source>
+        <translation>Nuovi valori</translation>
     </message>
     <message>
         <location filename="../raster_reclassifier_dialog_base.ui" line="582"/>
@@ -431,51 +461,59 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Raster di ingresso&lt;/span&gt; consente di scegliere il layer raster caricato nel progetto QGIS per l&apos;analisi e di selezionare la banda di colore da utilizzare per l&apos;estrazione degli intervalli. È possibile definire l&apos;estensione dell&apos;analisi selezionando &amp;quot;Raster completo&amp;quot; per analizzare l&apos;intero layer o &amp;quot;Vista corrente&amp;quot; per limitarla all&apos;area visibile nel progetto. Inoltre, è possibile personalizzare i colori dell&apos;istogramma e degli intervalli di classificazione, rendendo le classi visivamente distinguibili.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Classifica&lt;/span&gt; offre opzioni per i metodi di classificazione raster: &lt;span style=&quot; font-weight:600;&quot;&gt;Intervallo uguale&lt;/span&gt; per creare intervalli di uguale ampiezza, &lt;span style=&quot; font-weight:600;&quot;&gt;Quantile&lt;/span&gt; per definire intervalli basati sui quantili e &lt;span style=&quot; font-weight:600;&quot;&gt;Utente&lt;/span&gt; per definire manualmente gli intervalli in una tabella vuota. È possibile impostare il numero di classi e estrarre gli intervalli, che verranno visualizzati in una tabella pronta per la riclassificazione.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Raster di uscita&lt;/span&gt; mostra il percorso di salvataggio del file raster riclassificato, consente di selezionare la posizione di uscita e offre l&apos;opzione per caricare automaticamente il nuovo raster nel progetto QGIS.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Il &lt;span style=&quot; font-weight:600;&quot;&gt;Menu&lt;/span&gt; include azioni per eseguire la classificazione, cancellare i calcoli della sessione, salvare i valori della tabella come file CSV o TXT, salvare l&apos;istogramma come immagine e chiudere la finestra del plugin.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La scheda &lt;span style=&quot; font-weight:600;&quot;&gt;Tabella&lt;/span&gt; visualizza gli intervalli definiti e consente di inserire nuovi valori per la riclassificazione. Include statistiche del raster, come conteggio, media, valore minimo, massimo e deviazione standard. È inoltre possibile importare valori di intervallo da un file CSV o TXT, riempiendo automaticamente la tabella con dati esterni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Raster di ingresso&lt;/span&gt; consente di scegliere il layer raster caricato nel progetto QGIS per l&apos;analisi e di selezionare la banda di colore da utilizzare per l&apos;estrazione degli intervalli. È possibile definire l&apos;estensione dell&apos;analisi selezionando &amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;Raster completo&lt;/span&gt;&amp;quot; per l&apos;intero layer o &amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;Vista corrente&lt;/span&gt;&amp;quot; per limitarla all&apos;area visibile del progetto. È inoltre possibile &lt;span style=&quot; font-weight:600;&quot;&gt;personalizzare i colori&lt;/span&gt; per l&apos;istogramma e gli intervalli di classificazione, rendendo le classi visivamente distinte.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Classificazione&lt;/span&gt; fornisce opzioni per i metodi di classificazione raster: &lt;span style=&quot; font-weight:600;&quot;&gt;Intervallo uguale&lt;/span&gt; per intervalli uniformemente distanziati, &lt;span style=&quot; font-weight:600;&quot;&gt;Quantile&lt;/span&gt; per intervalli basati sui quantili e &lt;span style=&quot; font-weight:600;&quot;&gt;Utente&lt;/span&gt; per definire manualmente gli intervalli in una tabella vuota. È possibile impostare il &lt;span style=&quot; font-weight:600;&quot;&gt;numero di classi&lt;/span&gt; ed &lt;span style=&quot; font-weight:600;&quot;&gt;estrarre gli intervalli&lt;/span&gt;, che appariranno in una tabella pronta per la riclassificazione.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La sezione &lt;span style=&quot; font-weight:600;&quot;&gt;Raster di uscita&lt;/span&gt; visualizza il percorso di salvataggio per il file raster riclassificato, consente di selezionare la posizione di uscita e fornisce un&apos;opzione per &lt;span style=&quot; font-weight:600;&quot;&gt;caricare&lt;/span&gt; automaticamente il nuovo raster in QGIS.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Il &lt;span style=&quot; font-weight:600;&quot;&gt;Menu&lt;/span&gt; include azioni per &lt;span style=&quot; font-weight:600;&quot;&gt;eseguire la classificazione&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;cancellare&lt;/span&gt; i calcoli della sessione, &lt;span style=&quot; font-weight:600;&quot;&gt;salvare&lt;/span&gt; i valori della &lt;span style=&quot; font-weight:600;&quot;&gt;tabella&lt;/span&gt; come CSV o TXT,&lt;span style=&quot; font-weight:600;&quot;&gt; salvare l&apos;istogramma&lt;/span&gt; come immagine e chiudere la finestra del plugin.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La scheda &lt;span style=&quot; font-weight:600;&quot;&gt;Tabella&lt;/span&gt; mostra gli intervalli definiti e consente di immettere &lt;span style=&quot; font-weight:600;&quot;&gt;nuovi valori&lt;/span&gt; per la riclassificazione. Include &lt;span style=&quot; font-weight:600;&quot;&gt;statistiche raster&lt;/span&gt; come conteggio, media, minimo, massimo e deviazione standard. È inoltre possibile&lt;span style=&quot; font-weight:600;&quot;&gt; importare&lt;/span&gt; valori di intervallo da un file CSV o TXT, riempiendo automaticamente la tabella con dati esterni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="643"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="620"/>
         <source>Color</source>
-        <translation>Colori</translation>
+        <translation>Colore</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="687"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="664"/>
         <source>Intervalls</source>
         <translation>Intervalli</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="720"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="697"/>
         <source>Menu</source>
         <translation>Menu</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="732"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="709"/>
         <source>Run</source>
         <translation>Avvia</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="745"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="722"/>
         <source>Cancel</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="758"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="735"/>
         <source>Save table</source>
         <translation>Salva tabella</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="771"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="748"/>
         <source>Save graph</source>
         <translation>Salva grafico</translation>
     </message>
     <message>
-        <location filename="../raster_reclassifier_dialog_base.ui" line="784"/>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="761"/>
         <source>Close</source>
         <translation>Chiudi</translation>
+    </message>
+    <message>
+        <location filename="../raster_reclassifier_dialog_base.ui" line="775"/>
+        <source>Stato dei processi</source>
+        <translation>Stato dei processi</translation>
     </message>
 </context>
 </TS>
