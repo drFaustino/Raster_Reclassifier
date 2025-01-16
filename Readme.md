@@ -1,8 +1,6 @@
 # Plugin QGIS - Raster Reclassifier
-### Ver. 0.2
-The plugin allows you to divide raster values into intervals using methods such as **Equal Interval** (intervals of equal width), **Quantile** (intervals based on quantiles), or **User** (manual interval definition). It is possible to customize the **colors** for the histogram and classes, making it easier to visually interpret the generated categories. The intervals can be modified, and table data can be saved in standard formats such as **CSV** or **TXT**. Additionally, the reclassified raster can be saved and automatically **loaded** into the QGIS project for further analysis. The plugin includes tools to display essential **statistics**, such as the count of valid cells, the mean, minimum, maximum, and standard deviation of the raster. It also allows **importing** interval values directly from external files. Thanks to its user-friendly interface, the plugin is suitable even for users with limited experience, enabling more in-depth analyses, such as creating thematic maps, identifying key areas, and categorizing data for specific purposes. By automating complex processes, it reduces the risk of errors and saves time. Its versatility makes it applicable in various fields, including environmental analysis, land management, and urban planning. Support for standard formats and direct integration with QGIS ensures compatibility with other tools and software, making this plugin a powerful and flexible solution for improving raster data analysis and presentation. To run the plugin you need to install the following libraries numpy, matplotlib, gdal, csv and locale.
+### Ver. 0.3
 
-### What's new:
-In this version, a command has been added to automatically fill the table column for new values. Also, the translation for Spanish has been added, in addition to the Italian and English already present.
+Fixed some display bugs. Changed the import function for the third column of integer values. Added the ability to select the decimal separator to save with the output file.
 
-![Ing4](https://github.com/user-attachments/assets/8676ed10-f2bf-4025-ac07-b50a8b56bbf4)
+![Video_new](https://github.com/user-attachments/assets/bad1274b-e9e2-4868-bace-9d5b683d8688)
