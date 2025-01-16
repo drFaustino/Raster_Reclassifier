@@ -528,7 +528,7 @@ class RasterReclassifier:
             class_color = self.get_label_background_color(self.dlg.label_12)
 
             # Create the histogram
-            fig = plt.figure(figsize=(4.41, 3.01))
+            fig = plt.figure(figsize=(4.41, 3.41))
             ax = fig.add_subplot(111)
             ax.grid(True)
             ax.hist(masked_data.compressed(), bins=200, color=histogram_color, alpha=0.7)
@@ -551,7 +551,7 @@ class RasterReclassifier:
 
             plt.tight_layout(pad=0.5)
             self.canvas = FigureCanvas(fig)
-            self.canvas.setFixedSize(441, 301)
+            self.canvas.setFixedSize(441, 341)
             scene = QGraphicsScene()
             scene.addWidget(self.canvas)
             self.dlg.graphicsView_hystogram.setScene(scene)
@@ -563,11 +563,13 @@ class RasterReclassifier:
         except Exception as e:
             QMessageBox.critical(self.dlg, self.tr("Error"), self.tr(f"Error generating histogram: {str(e)}"))
     
-
     def create_empty_histogram(self):
         try:
+            # Close any existing figures to prevent multiple figures from stacking up in memory
+            plt.close('all')  # Chiude tutte le figure attive
+
             # Create the figure and the axis
-            fig = plt.figure(figsize=(4.41, 3.01))  # Sized to fit QGraphicsView
+            fig = plt.figure(figsize=(4.41, 3.41))  # Sized to fit QGraphicsView
             ax = fig.add_subplot(111)
 
             # Clean the chart from any previous data
@@ -590,7 +592,7 @@ class RasterReclassifier:
 
             # Create the FigureCanvas to display the graph inside the QGraphicsView
             self.canvas = FigureCanvas(fig)
-            self.canvas.setFixedSize(441, 301)  # Fixed size to fit QGraphicsView
+            self.canvas.setFixedSize(441, 341)  # Fixed size to fit QGraphicsView
 
             # Create a graphic scene and add the canvas
             scene = QGraphicsScene()
@@ -665,15 +667,15 @@ class RasterReclassifier:
             # Get the matching delimiter
             delimiter = delimiter_map.get(selected_delimiter, ";")  # Default ';' if not found
 
+            # Get the selected decimal symbol from the comboBox
+            decimal_symbol = self.dlg.comboBox_decimals.currentText()  # It can be either "." or ","
+
             # Ask the user to choose the path and name of the file to save
             options = QFileDialog.Options()
             file_path, _ = QFileDialog.getSaveFileName(self.dlg, self.tr("Save table"), "", self.tr("CSV Files (*.csv);;Text Files (*.txt)"), options=options)
 
             if not file_path:  # If the user has not chosen a file, exit
                 return
-
-            # Determines the extension of the chosen file
-            # file_extension = file_path.split('.')[-1].lower()
 
             # Open the file for writing
             with open(file_path, mode='w', newline='', encoding='utf-8') as file:
@@ -688,16 +690,34 @@ class RasterReclassifier:
                     end_item = self.dlg.tableWidget_value.item(row, 1)
                     new_item = self.dlg.tableWidget_value.item(row, 2)
 
-                    # Write each row of the table into the file
-                    writer.writerow([start_item.text() if start_item else '', 
-                                    end_item.text() if end_item else '', 
-                                    new_item.text() if new_item else ''])
+                    # Format the numerical values with the selected decimal symbol
+                    def format_decimal(value):
+                        try:
+                            if value:
+                                # Convert to float
+                                value = float(value)
+                                # Format with two decimal places
+                                formatted_value = f"{value:.2f}"
+                                # Replace the decimal point with the selected symbol
+                                return formatted_value.replace('.', decimal_symbol)
+                            else:
+                                return ""
+                        except ValueError:
+                            return value  # Return original value if not a number
+
+                    # Write each row of the table into the file, formatting all numerical columns
+                    writer.writerow([
+                        format_decimal(start_item.text()) if start_item else '', 
+                        format_decimal(end_item.text()) if end_item else '', 
+                        new_item.text() if new_item else ''
+                    ])
 
             # Show a confirmation message
             QMessageBox.information(self.dlg, self.tr("Save completed"), self.tr("Table saved successfully!"))
 
         except Exception as e:
             QMessageBox.critical(self.dlg, self.tr("Error"), self.tr(f"Error saving file: {str(e)}"))
+
     
     def on_pushButton_graph(self):
         try:
@@ -788,17 +808,14 @@ class RasterReclassifier:
                 self.color_dialog_class.deleteLater()
                 self.color_dialog_class = None
 
+            # Close any existing figures to prevent multiple figures from stacking up in memory
+            plt.close('all')  # Chiude tutte le figure attive
+
         except Exception as e:
             QMessageBox.critical(self.dlg, self.tr("Error"), self.tr(f"Error during cleanup: {str(e)}"))
 
 
     def import_values(self):
-        # Check if the table is empty
-        row_count = self.dlg.tableWidget_value.rowCount()
-        if row_count == 0:
-            QMessageBox.warning(self.dlg, self.tr("Error"), self.tr("Select User from the menu and run ranking."))
-            return  
-            
         # Get the selected delimiter from the comboBox
         selected_delimiter = self.dlg.comboBox_col_delim.currentText()
 
@@ -836,7 +853,7 @@ class RasterReclassifier:
                 try:
                     # Try to convert the first 3 values to numbers (float)
                     for value in row_data[:3]:  # Only the first 3 values
-                        float(value)  # If the conversion is successful, the value is numeric
+                        float(value.replace(',', '.'))  # # Convert using "." as the decimal separator
                     return True
                 except ValueError:
                     return False
@@ -852,11 +869,28 @@ class RasterReclassifier:
                     row_index = self.dlg.tableWidget_value.rowCount()
                     self.dlg.tableWidget_value.insertRow(row_index)
                     for col_index in range(3):  # Solo le prime 3 colonne
-                        self.dlg.tableWidget_value.setItem(row_index, col_index, QTableWidgetItem(row_data[col_index]))
+                        # Replace commas with periods in numeric values
+                        value = row_data[col_index].replace(',', '.') if self.is_numeric(row_data[col_index]) else row_data[col_index]
+                        item = QTableWidgetItem(value)
+                        item.setTextAlignment(Qt.AlignCenter)  # Allinea al centro
+                        self.dlg.tableWidget_value.setItem(row_index, col_index, item)
+
+            # Set the spinBox_classes value to the number of rows in the table
+            row_count = self.dlg.tableWidget_value.rowCount()
+            self.dlg.spinBox_classes.setValue(row_count)
+
         except Exception as e:
             # Show an error message if there is a problem
             QMessageBox.critical(self.dlg, self.tr("Error"), self.tr(f"Unable to import data: {str(e)}"))
 
+    def is_numeric(self, value):
+        """Helper method to check if a value is numeric."""
+        try:
+            # Try to convert the value to float
+            float(value.replace(',', '.'))  # Convert using "." as the decimal separator
+            return True
+        except ValueError:
+            return False
 
     def on_pushButton_calculate(self):
         try:
@@ -1013,7 +1047,9 @@ class RasterReclassifier:
 
         # Fills the third column with increasing integer values starting from 1
         for row in range(row_count):
-            self.dlg.tableWidget_value.setItem(row, 2, QTableWidgetItem(str(row + 1)))
-
+            item = QTableWidgetItem(str(row + 1))  # Crea un nuovo item con il valore
+            item.setTextAlignment(Qt.AlignCenter)  # Allinea il testo al centro
+            self.dlg.tableWidget_value.setItem(row, 2, item)  # Aggiungi l'item alla cella
+        
         # Mostra un messaggio di conferma
         QMessageBox.information(self.dlg, self.tr("Operation completed"), self.tr("The new values have been added successfully."))
