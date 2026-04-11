@@ -73,13 +73,16 @@ Displays interval limits and new class values
 * Export the histogram as PNG/JPG
 * Close the plugin
 
-### Workflow
-1. Select raster and band
-2. Choose classification method
-3. Generate histogram and intervals
-4. Adjust intervals manually or interactively
-5. Set output path
-6. Run reclassification
+### Workflow Illustration
+1. Select the raster layer
+2. Choose the band to analyze
+3. Define the colors for the histogram and interval lines
+4. Choose the classification method
+5. Set the number of classes
+6. Click Extract to generate the histogram and intervals
+7. Fill the table with the new values for each interval
+8. Specify the output file path
+9. Click Run to start the reclassification process
 
 The plugin uses GDAL and NumPy for fast raster processing.
 
@@ -93,3 +96,16 @@ Faustino Cetraro
 Geologist, scientific communicator, and software developer
 Creator of Plugin Builder Enterprise for QGIS 4 / Qt6  
 Developer of geomorphological and scientific tools for QGIS
+
+### Illustrate
+![illustrate](https://github.com/user-attachments/assets/9241c7ac-d5bb-46d8-8f24-26e15ad64285)
+
+### Note for User Mode
+1. Select the User method
+2. Set the number of classes
+3. Click Extract to generate the empty interval table and histogram
+4. Click on the first row of the table
+5. Define interval boundaries by either:
+6. Typing the values manually into the table, or clicking on the histogram at the desired X value
+7. Continue this process for all rows except the last one, which is filled automatically by the plugin
+   
