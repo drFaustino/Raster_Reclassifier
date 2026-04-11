@@ -2,8 +2,7 @@
 name=Raster Reclassifier
 qgisMinimumVersion=3.40
 qgisMaximumVersion=4.99
-supportsQt6=True
-version=1.0.0
+version=1.1.0
 author=Dr. Geol. Faustino Cetraro
 email=geol-faustino@libero.it
 homepage=https://github.com/drFaustino/Raster_Reclassifier
@@ -11,18 +10,19 @@ repository=https://github.com/drFaustino/Raster_Reclassifier
 tracker=https://github.com/drFaustino/Raster_Reclassifier
 icon=resources/images/icon_rast.png
 category=Raster
-tags=raster, reclassify, histogram, analysis, gdal, numpy, classification
+tags=raster, reclassify, histogram, analysis, gdal, numpy, classification, intervals, qgis4, qt6
 experimental=False
 deprecated=False
 hasProcessingProvider=False
 
-about=Reclassify raster values using equal intervals, quantiles, or user-defined ranges. Includes histogram visualization, statistics, table export, and graph export.
+about=Reclassify raster values using equal intervals, quantiles, K-means, Natural Breaks (approx.), or user-defined ranges. Includes histogram visualization, raster statistics, interactive interval definition, table import/export, and graph export.
 
-description=Raster Reclassifier for QGIS 4 (Qt6). Supports histogram generation, quantile classification, manual intervals, table import/export, graph export, and raster output selection.
+description=Raster Reclassifier for QGIS 4 (Qt6). Supports histogram generation, multiple classification methods, manual and interactive interval definition, table import/export (CSV/TXT), graph export, and customizable output raster settings.
 
-changelog=Version 1.0.0:
- - Full Qt6 / QGIS 4 compatibility
- - Modular architecture (core/, gui/)
- - Histogram + quantile + user-defined intervals
- - Table import/export
- - Graph export
+changelog=Version 1.1.0:
+ - Added interactive interval definition in User mode (row selection + histogram click)
+ - Automatic filling of interval boundaries based on row position
+ - Movable and fixed boundary lines on histogram (xmin/xmax)
+ - Improved table validation and color handling
+ - Enhanced histogram refresh from table values
+ - Updated documentation and README

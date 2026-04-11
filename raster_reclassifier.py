@@ -53,4 +53,4 @@ class RasterReclassifier:
             self.dlg.exec()
 
         except Exception as e:
-            QMessageBox.critical(self.iface.mainWindow(), "Error", str(e))
+            QMessageBox.critical(self.iface.mainWindow(), self.tr("Error"), str(e))
