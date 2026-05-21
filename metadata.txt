@@ -2,7 +2,7 @@
 name=Raster Reclassifier
 qgisMinimumVersion=3.40
 qgisMaximumVersion=4.99
-version=1.1.0
+version=1.1.1
 author=Dr. Geol. Faustino Cetraro
 email=geol-faustino@libero.it
 homepage=https://github.com/drFaustino/Raster_Reclassifier
@@ -19,7 +19,11 @@ about=Reclassify raster values using equal intervals, quantiles, K-means, Natura
 
 description=Raster Reclassifier for QGIS 4 (Qt6). Supports histogram generation, multiple classification methods, manual and interactive interval definition, table import/export (CSV/TXT), graph export, and customizable output raster settings.
 
-changelog=Version 1.1.0:
+changelog=
+Version 1.1.1:
+Reclassification rules are now checked with a try/except block to prevent crashes when table cells contain empty, non‑numeric, or improperly formatted values. The plugin now displays a clear error message indicating the problematic row and stops processing safely instead of failing at 20%.
+
+Version 1.1.0:
  - Added interactive interval definition in User mode (row selection + histogram click)
  - Automatic filling of interval boundaries based on row position
  - Movable and fixed boundary lines on histogram (xmin/xmax)

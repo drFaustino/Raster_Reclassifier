@@ -96,16 +96,3 @@ Faustino Cetraro
 Geologist, scientific communicator, and software developer
 Creator of Plugin Builder Enterprise for QGIS 4 / Qt6  
 Developer of geomorphological and scientific tools for QGIS
-
-### Illustrate
-![illustrate](https://github.com/user-attachments/assets/9241c7ac-d5bb-46d8-8f24-26e15ad64285)
-
-### Note for User Mode
-1. Select the User method
-2. Set the number of classes
-3. Click Extract to generate the empty interval table and histogram
-4. Click on the first row of the table
-5. Define interval boundaries by either:
-6. Typing the values manually into the table, or clicking on the histogram at the desired X value
-7. Continue this process for all rows except the last one, which is filled automatically by the plugin
-   

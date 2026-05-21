@@ -1,5 +1,9 @@
 # Changelog – Raster Reclassifier
-## [1.1.0] – 2026‑04‑XX
+## [1.1.1] – 2026‑05‑21
+### Added robust numeric validation in the reclassification engine:  
+Reclassification rules are now checked with a try/except block to prevent crashes when table cells contain empty, non‑numeric, or improperly formatted values. The plugin now displays a clear error message indicating the problematic row and stops processing safely instead of failing at 20%.
+
+## [1.1.0] – 2026‑04‑11
 ### Added
 * Full support for interactive interval definition in User mode:
   - Select a table row and click on the histogram to set interval boundaries.

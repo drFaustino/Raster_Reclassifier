@@ -6,7 +6,7 @@ from qgis.PyQt.QtWidgets import QDialog, QColorDialog
 from qgis.PyQt.QtCore import Qt
 
 from ..core.reclassifier_engine import ReclassifierEngine
-
+from qgis.PyQt import QtGui
 
 FORM_CLASS, _ = uic.loadUiType(
     os.path.join(os.path.dirname(__file__), "raster_reclassifier_dialog_base.ui")
@@ -20,7 +20,21 @@ class RasterReclassifierDialog(QDialog, FORM_CLASS):
         self.iface = iface
         self.setupUi(self)
 
+        # Imposta colori iniziali sui pulsanti
+        self.colorButton_histogram.setColor(QtGui.QColor(170, 255, 255))
+        self.colorButton_lines.setColor(QtGui.QColor(255, 0, 0))
+
+        # Salva i colori nel dialog
+        self.hist_color = self.colorButton_histogram.color()
+        self.line_color = self.colorButton_lines.color()
+
+        # Crea l’engine SENZA colori
         self.engine = ReclassifierEngine(self)
+
+        # Passa i colori all’engine
+        self.engine.hist_color = self.hist_color
+        self.engine.line_color = self.line_color
+
         self._connect_signals()
 
     def prepare(self):
@@ -39,8 +53,9 @@ class RasterReclassifierDialog(QDialog, FORM_CLASS):
     def _connect_signals(self):
         self.cmb_raster_load.currentIndexChanged.connect(self.engine.populate_bands)
 
-        self.pushButton_colore_histogram.clicked.connect(self._change_hist_color)
-        self.pushButton_colore_class.clicked.connect(self._change_class_color)
+        # Nuovi QgsColorButton
+        self.colorButton_histogram.colorChanged.connect(self.update_hist_color)
+        self.colorButton_lines.colorChanged.connect(self.update_line_color)
 
         self.pushButton_extract.clicked.connect(self.engine.create_histogram)
         self.pushButton_save_raster.clicked.connect(self.engine.select_output_file)
@@ -51,18 +66,18 @@ class RasterReclassifierDialog(QDialog, FORM_CLASS):
 
         self.pushButton_run.clicked.connect(self.engine.run_reclassification)
         self.pushButton_cancel.clicked.connect(self.engine.reset)
+        self.pushButton_draw_lines.clicked.connect(self.engine.draw_lines_from_table)
 
         self.pushButton_save_table.clicked.connect(self.engine.save_table)
         self.pushButton_graph.clicked.connect(self.engine.save_graph)
 
         self.pushButton_close.clicked.connect(self.close)
 
-    def _change_hist_color(self):
-        color = QColorDialog.getColor(parent=self)
-        if color.isValid():
-            self.label_10.setStyleSheet(f"background-color: {color.name()};")
+    def update_hist_color(self, color):
+        self.hist_color = color
+        self.engine.hist_color = color
 
-    def _change_class_color(self):
-        color = QColorDialog.getColor(parent=self)
-        if color.isValid():
-            self.label_12.setStyleSheet(f"background-color: {color.name()};")
+    def update_line_color(self, color):
+        self.line_color = color
+        self.engine.line_color = color
+
