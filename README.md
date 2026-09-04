@@ -96,3 +96,6 @@ Faustino Cetraro
 Geologist, scientific communicator, and software developer
 Creator of Plugin Builder Enterprise for QGIS 4 / Qt6  
 Developer of geomorphological and scientific tools for QGIS
+
+
+<img width="998" height="647" alt="img4" src="https://github.com/user-attachments/assets/ec8eecff-9878-4d84-b48a-606782147134" />
